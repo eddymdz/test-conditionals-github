@@ -5,4 +5,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print the current date
-        run: echo ${{ github.event.repository.updated_at}} | sed 's/:/./g'
+        run: echo ${{ github.event.repository.updated_at}} | cut -d T -f 1
+
