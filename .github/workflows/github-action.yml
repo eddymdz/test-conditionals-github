@@ -4,6 +4,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      if  "2017-03-08T19:41:26Z" | cut -d T -f 2 | cut -d : -f 1 | == 19
       - name: Print the current date
-        run: echo ${{ github.event.repository.updated_at}} | cut -d T -f 1
+        run: echo "Done"
 
